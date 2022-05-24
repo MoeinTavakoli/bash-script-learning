@@ -1,0 +1,10 @@
+# !/bin/bash
+
+
+if [ -f $1 ]
+then 
+    chmod a+rw $1
+    echo " permission added"
+else
+    echo "file not found ..."
+fi

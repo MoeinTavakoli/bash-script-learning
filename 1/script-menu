@@ -1,0 +1,51 @@
+# !/bin/sh
+
+echo "1-list of file"
+echo "2-Processes of Users"
+echo "3-current date"
+echo "4-Quit out of Unix"
+
+read menu 
+
+
+if [ $menu -eq 1 ]
+then 
+    echo "please insert directory to take a list : "
+    read path
+
+    clear
+
+    echo "list path $path"
+    if [ -d $path ] 
+    then
+        ls -l $path
+    else
+        echo "Directory $1 does not exists."
+fi
+
+
+elif [ $menu -eq 2 ]
+then 
+    
+    #############
+    echo "please insert user for list of your proccess"
+    read user
+
+    top -u $user
+    #############
+
+elif [ $menu -eq 3 ]
+then 
+    now=$(date)
+    echo "Current date: $now"
+
+elif [ $menu -eq 4 ]
+then 
+    echo "exit now "
+    break
+
+else
+
+     echo "invalid input number (please choose number [1-4] )"
+
+fi

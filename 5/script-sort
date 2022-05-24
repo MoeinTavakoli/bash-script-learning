@@ -1,0 +1,49 @@
+# !/bin/sh
+
+
+
+while true
+do
+
+
+echo "1=index 2=ostan 3=city 4=description 0=exit" 
+echo "choose your input "
+read choice
+
+clear
+
+if [ $choice -eq 1 ]
+then
+
+   echo "sort by index"
+    sort -n database
+
+elif [ $choice -eq 2 ]
+then
+   echo "sort by ostan"
+   sort -k 2 database
+
+
+elif [ $choice -eq 3 ]
+then
+   echo "sort by city"
+   sort -k 3 database
+
+elif [ $choice -eq 4 ]
+then
+   echo "sort by description"
+   sort -k 4 database
+
+
+elif [ $choice -eq 0 ]
+then
+   echo "exit"
+   break
+
+else
+
+     echo "invalid choice !!!"
+
+fi
+
+done
