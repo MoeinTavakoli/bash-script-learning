@@ -2,9 +2,10 @@
 
 
 if [ -f $1 ]
-then 
-    chmod a+rw $1
-    echo " permission added"
+then
+    echo "path : $1"
+    echo "permissions : $(ls -l $1| awk '{print $1}')"
+
 else
     echo "file not found ..."
 fi
