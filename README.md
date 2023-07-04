@@ -15,3 +15,4 @@
  4. Write a shell program to convert all lowercase letters in a file to uppercase letter.
  5. Write a shell program for file contains records ith each record containing name and city, name of state and name of country. How would you sort this file with country as the primary key and state the secondary sort key
  6. Write a shell program for check status of services.
+ 7. Write about special variables.
